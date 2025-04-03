@@ -6,7 +6,7 @@ const modelSelect=document.getElementById("model-select");
 const countSelect=document.getElementById("count-select");
 const ratioSelect=document.getElementById("ratio-select");
 const galleryGrid=document.querySelector(".gallery-grid");
-const API_KEY="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";
+// const API_KEY="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";
 
 const examplePrompts=[
     "A futuristic cyberpunk city at night, neon lights reflecting off wet streets, flying cars in the sky.",
