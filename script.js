@@ -59,7 +59,7 @@ const updateImageCard=(imgIndex,imgUrl) =>{
 
 // send request to hugging face API to create images
 const generateImages = async(selectModel, imageCount, aspectRatio, promptText) => {
-    const MODEL_URL = `https://router.huggingface.co/replicate/v1/models/${selectModel}`; // Removed extra double quote
+    // const MODEL_URL = `https://router.huggingface.co/replicate/v1/models/${selectModel}`; // Removed extra double quote
    const {width,height}= getImageDimensions(aspectRatio);
 
    // create an array of image generation promises
