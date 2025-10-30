@@ -6,9 +6,9 @@ const modelSelect=document.getElementById("model-select");
 const countSelect=document.getElementById("count-select");
 const ratioSelect=document.getElementById("ratio-select");
 const galleryGrid=document.querySelector(".gallery-grid");
-import dotenv from  'dotenv';
-dotenv.config();
-const url=process.env.API_KEY;
+
+// API Configuration - Replace with your actual Hugging Face API key
+const API_KEY = "YOUR_HUGGING_FACE_API_KEY_HERE"; // Add your API key here
 
 
 const examplePrompts=[
@@ -62,8 +62,8 @@ const updateImageCard=(imgIndex,imgUrl) =>{
 
 // send request to hugging face API to create images
 const generateImages = async(selectModel, imageCount, aspectRatio, promptText) => {
-    // const MODEL_URL = `https://router.huggingface.co/replicate/v1/models/${selectModel}`; // Removed extra double quote
-   const {width,height}= getImageDimensions(aspectRatio);
+    const MODEL_URL = `https://api-inference.huggingface.co/models/${selectModel}`;
+    const {width,height}= getImageDimensions(aspectRatio);
 
    // create an array of image generation promises
    const imagePromises=Array.from({length:imageCount},async(_,i)=>{
